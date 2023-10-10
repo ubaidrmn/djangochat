@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  volumes:
+    db_data:
+
+  api:
+    image: djangochat/api
+    ports:
+      - 8000:8000
+    env:
+      - app.default.env
+
+  frontend:
+    image: djangochat/frontend
+    ports:
+      - 3000:3000
+    env:
+      - app.default.env
+
+  postgres:
+    image: postgres:13-alpine
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
