@@ -1,6 +1,5 @@
 from __future__ import annotations
 from django.contrib.auth.models import BaseUserManager
-from configurations.models import Configuration
 
 
 class UserManager(BaseUserManager):
