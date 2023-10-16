@@ -31,7 +31,7 @@ function App() {
     await peerConnection.setLocalDescription(offer);
     // signalingChannel.send({'offer': offer});
     console.log(offer);
-    chatSocket.send(JSON.stringify({offer: offer}))
+    chatSocket.send(JSON.stringify({message: offer, sender_id: 1, reciever_id: 2}))
 }
 
   return (
