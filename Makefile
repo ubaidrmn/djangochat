@@ -12,6 +12,6 @@ docker-build-api:
 		api
 
 # docker-build-frontend:
-# 	# docker build \
-# 	# 	-t ${DOCKER_FRONTEND_IMAGE_NAME} \
-# 	# 	frontend
+# 	docker build \
+# 		-t ${DOCKER_FRONTEND_IMAGE_NAME} \
+# 		frontend

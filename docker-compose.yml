@@ -7,14 +7,20 @@ services:
 
   api:
     image: djangochat/api
-    ports:
-      - 8000:8000
+    command: [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
     env_file:
       - app.default.env
     volumes: 
       - ./api:/api
+    ports:
+      - "8000:8000"
     depends_on:
       - postgres
+
+  redis:
+    image: redis:7.2.1
+    ports:
+      - 6379:6379
 
   # frontend:
   #   image: djangochat/frontend
