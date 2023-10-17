@@ -7,7 +7,8 @@ services:
 
   api:
     image: djangochat/api
-    command: [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
+    # command: [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
+    command: bash -c 'sleep 5; python3 manage.py runserver 0.0.0.0:8000'
     env_file:
       - app.default.env
     volumes: 
