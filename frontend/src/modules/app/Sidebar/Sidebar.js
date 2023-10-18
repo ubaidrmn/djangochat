@@ -2,7 +2,7 @@ import React from "react";
 import DCSidebar from "../../../lib/components/DCSidebar/DCSidebar";
 import DCSidebarItem from "../../../lib/components/DCSidebar/DCSidebarItem";
 
-function Navbar() {
+function Sidebar() {
     return (
         <DCSidebar user={{
             fullname: "Ubaid Rehman"
@@ -14,4 +14,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default Sidebar;

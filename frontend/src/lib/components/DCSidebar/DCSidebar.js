@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import DCSidebarAccountItem from "./DCSidebarAccountItem";
+import DCSidebarSearch from "./DCSidebarSearch";
 
 function DCSidebar(props) {
 
@@ -7,7 +8,7 @@ function DCSidebar(props) {
 
     const Sidebar = styled.div`
         padding: 25px;
-        max-width: 300px;
+        max-width: 100%;
         width: 100%;
         background-color: rgb(17 24 39);
         height: 100%;
@@ -20,6 +21,7 @@ function DCSidebar(props) {
     return (
         <Sidebar {...props}>
             <DCSidebarAccountItem profilePictureUrl={profilePictureUrl} fullname={fullname} />
+            <DCSidebarSearch />
             {props.children}
         </Sidebar>
     );

@@ -3,20 +3,26 @@ import { store } from './store'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RegisterScreen from "../../authentication/RegisterScreen";
-import Navbar from "../Navbar";
 import { rootStyle } from "./styles";
+import Sidebar from "../Sidebar/Sidebar";
+import ChatScreen from "../../chat/ChatScreen/ChatScreen";
 
 function Root() {
+
+  const SidebarScreenWrapper = props => {
+    return <div style={rootStyle}>
+      <Sidebar />
+      {props.children}
+    </div>
+  }
 
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <div style={rootStyle}>
-          <Navbar />
-          <Routes>
-            <Route path="/register" element={<RegisterScreen />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/register" element={<RegisterScreen />} />
+          <Route path="/" element={<SidebarScreenWrapper><ChatScreen /></SidebarScreenWrapper>} />
+        </Routes>
       </BrowserRouter>
     </Provider>
   );
