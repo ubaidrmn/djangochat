@@ -6,6 +6,8 @@ import RegisterScreen from "../../authentication/RegisterScreen";
 import { rootStyle } from "./styles";
 import Sidebar from "../Sidebar/Sidebar";
 import ChatScreen from "../../chat/ChatScreen/ChatScreen";
+import ProtectedRoute from "../../authentication/ProtectedRoute/ProtectedRoute";
+import LoginScreen from "../../authentication/LoginScreen/LoginScreen";
 
 function Root() {
 
@@ -21,7 +23,8 @@ function Root() {
       <BrowserRouter>
         <Routes>
           <Route path="/register" element={<RegisterScreen />} />
-          <Route path="/" element={<SidebarScreenWrapper><ChatScreen /></SidebarScreenWrapper>} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="/" element={<ProtectedRoute><SidebarScreenWrapper><ChatScreen /></SidebarScreenWrapper></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </Provider>

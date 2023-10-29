@@ -3,7 +3,7 @@ import DCHeadingLarge from "../../../lib/components/DCHeading/DCHeadingLarge";
 import DCInputBox from "../../../lib/components/DCInputBox/DCInputBox";
 import { DARK_BACKGROUND_COLOR_PRIMARY, LIGHT_FONT_COLOR_PRIMARY } from "../../../lib/components/constants";
 
-function RegisterScreen() {
+function LoginScreen() {
     return (
         <>
             <div style={{
@@ -18,15 +18,15 @@ function RegisterScreen() {
                     width: "100%",
                     margin: "0px auto"
                 }}>
-                    <DCHeadingLarge style={{textAlign: "center"}}>Create a new account</DCHeadingLarge>
+                    <DCHeadingLarge style={{textAlign: "center"}}>Login</DCHeadingLarge>
                     <DCInputBox placeholder="Username" />
-                    <DCInputBox placeholder="Email" />
                     <DCInputBox type="password" placeholder="Password" />
-                    <DCButton>Register</DCButton>
+                    <DCButton>Login</DCButton>
+                    <
                 </div>
             </div>
         </>
     );
 }
 
-export default RegisterScreen;
+export default LoginScreen;
