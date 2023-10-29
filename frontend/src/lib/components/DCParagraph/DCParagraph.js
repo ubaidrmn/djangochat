@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { LIGHT_FONT_COLOR_PRIMARY } from "../constants";
 
 function DCParagraph(props) {
@@ -6,5 +7,7 @@ function DCParagraph(props) {
         margin: 0px;
         padding: 0px;
     `;
-    return <P
+    return <P {...props}>{props.children}</P>
 }
+
+export default DCParagraph;
